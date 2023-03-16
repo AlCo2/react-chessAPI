@@ -1,4 +1,5 @@
 import React from 'react';
+import Dashboard from './assets/dashboard/Dashboard';
 import Searchbar from './assets/searchbar/Searchbar';
 import Sidebar from './assets/sidebar/Sidebar';
 
@@ -7,9 +8,7 @@ const App = () => {
     <>
       <Sidebar/>
       <Searchbar/>
-      <div className='h-screen bg-black'>
-
-      </div>
+      <Dashboard/>
     </>
   )
 }
