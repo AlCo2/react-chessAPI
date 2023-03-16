@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { RxDashboard} from 'react-icons/rx';
 import {FiActivity, FiSettings} from 'react-icons/fi'
 import {AiFillSchedule} from 'react-icons/ai'
-
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [active, setActive] = useState('Dashboard');
@@ -17,17 +17,17 @@ const Sidebar = () => {
             <button className='border text-white rounded-md w-10 text-sm hover:bg-white hover:text-black transition-all hover:rounded-xl duration-300 ease-linear'>Edit</button>
           </div>
         </div>
-        <div onClick={()=>setActive('Dashboard')}> <SideBarIcon nameOfClass={active==='Dashboard'?'active':''} icon={<RxDashboard size="28"/>} text={"Dashboard"} /></div>
-        <div onClick={()=>setActive('Activity')}><SideBarIcon nameOfClass={active==='Activity'?'active':''}  icon={<FiActivity size="28"/>} text={"Activity"} /></div>
-        <div onClick={()=>setActive('Schedule')}><SideBarIcon nameOfClass={active==='Schedule'?'active':''}  icon={<AiFillSchedule size="28"/>} text={"Schedule"} /></div>
-        <div onClick={()=>setActive('Settings')}><SideBarIcon nameOfClass={active==='Settings'?'active':''}  icon={<FiSettings size="28"/>} text={"settings"}/></div>
+        <Link to="/" onClick={()=>setActive('Dashboard')}> <SideBarIcon nameOfClass={active==='Dashboard'?'active':''} icon={<RxDashboard size="28"/>} text={"Dashboard"} /></Link>
+        <Link to="/activity" onClick={()=>setActive('Activity')}><SideBarIcon nameOfClass={active==='Activity'?'active':''}  icon={<FiActivity size="28"/>} text={"Activity"} /></Link>
+        <Link to="/schedule" onClick={()=>setActive('Schedule')}><SideBarIcon nameOfClass={active==='Schedule'?'active':''}  icon={<AiFillSchedule size="28"/>} text={"Schedule"} /></Link>
+        <Link to="/settings" onClick={()=>setActive('Settings')}><SideBarIcon nameOfClass={active==='Settings'?'active':''}  icon={<FiSettings size="28"/>} text={"settings"}/></Link>
     </div>
   )
 }
 const SideBarIcon = ({icon, text='tooltip', nameOfClass}) => (
     <div className={'sidebar-icon group '+ nameOfClass}>
         {icon}
-
+        
         <span className='sidebar-tooltip group-hover:scale-100'>
             {text}
         </span>

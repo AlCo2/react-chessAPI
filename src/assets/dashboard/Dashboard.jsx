@@ -1,5 +1,7 @@
 import React from 'react'
 import { FiAlertOctagon,FiArrowRight} from 'react-icons/fi';
+
+
 const Dashboard = () => {
   return (
     <div className='bg-primary ml-40 pl-10 h-max pb-10 flex flex-wrap gap-x-12 gap-y-10'>
