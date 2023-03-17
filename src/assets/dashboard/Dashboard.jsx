@@ -27,11 +27,11 @@ const Section1 = ()=>{
             </div>
             <div>
                 <div className='border-b flex place-content-between border-black pb-2'>
-                    <p className="flex"><div className='w-4 h-4 relative top-1 right-1 rounded bg-black'></div> Social Media</p>
+                    <div className="flex"><p className='w-4 h-4 relative top-1 right-1 rounded bg-black'></p> Social Media</div>
                     <p className='font-bold'>78%</p>
                 </div>
                 <div className='pt-1 flex place-content-between'>
-                    <p className="flex"><div className='w-4 h-4 relative top-1 right-1 rounded bg-slate-400'></div>Organic Search</p>
+                    <div className="flex"><p className='w-4 h-4 relative top-1 right-1 rounded bg-slate-400'></p>Organic Search</div>
                     <p className='font-bold'>22%</p>
                 </div>
             </div>
@@ -68,7 +68,7 @@ const Section3 = ()=>{
             <div>
                 <div className='flex place-content-between border-black pb-2'>
                     <p className='border-r font-semibold border-black text-5xl pr-10'>23%</p>
-                    <p className='font-bold'>-10% <br /> <p className='font-normal text-xs'>Since Last Day</p></p>
+                    <p className='font-bold'>-10% <br /> <span className='font-normal text-xs'>Since Last Day</span></p>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@ const Section4 = ()=>{
                 <p className='text-xs text-right opacity-70'>Details</p>
             </div>
             <div className='py-8'>
-                <p className='text-3xl font-semibold'>283% <br /> <p className='text-sm opacity-60 font-normal'>Return On Investment</p></p>
+                <p className='text-3xl font-semibold'>283% <br /> <span className='text-sm opacity-60 font-normal'>Return On Investment</span></p>
             </div>
             <div>
                 <div className='w-max'>
