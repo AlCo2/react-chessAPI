@@ -14,11 +14,13 @@ const Leaderboards = () => {
         <div className='flex justify-center'>
             <p className='-translate-x-8 bg-orange text-sm px-10 py-1 rounded'>Daily</p>
         </div>
+        {chessPlayers && chessPlayers.daily && 
         <div className='flex h-ma w-max p-10 gap-36 mt-10 mb-10 ml-5 rounded'>
-            <div className='translate-y-10 h-max p-5 shadow-2xl border-b'><User name={'Alco2'} color='text-gray-500' rank={3} pic={'https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg'}/></div>
-            <div className='h-max p-5 shadow-2xl border-b'><User name={'Alco2'} color='text-yellow-500' rank={1} pic={'https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg'}/></div>
-            <div className='translate-y-10 h-max p-5 shadow-2xl border-b'><User name={'Alco2'} color='text-green-200' rank={2} pic={'https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg'}/></div>
+            <div className='translate-y-10 h-max p-5 shadow-2xl border-b'><User name={chessPlayers.daily[2].username} color='text-gray-500' rank={chessPlayers.daily[2].rank} pic={chessPlayers.daily[2].avatar} /></div>
+            <div className='h-max p-5 shadow-2xl border-b'><User name={chessPlayers.daily[0].username} color='text-yellow-500' rank={chessPlayers.daily[0].rank} pic={chessPlayers.daily[0].avatar} /></div>
+            <div className='translate-y-10 h-max p-5 shadow-2xl border-b'><User name={chessPlayers.daily[1].username} color='text-green-200' rank={chessPlayers.daily[1].rank} pic={chessPlayers.daily[1].avatar} /></div>
         </div>
+        }
         <div className='w-full grid place-items-center'>
             <table className='w-2/3'>
             <tbody>
