@@ -1,6 +1,14 @@
+import React, { useEffect, useState } from 'react'
 import {BsFillTrophyFill} from 'react-icons/bs'
 
 const Leaderboards = () => {
+    const [chessPlayers, setChessPlayers] = useState([]);
+        useEffect(()=>{
+        fetch("https://api.chess.com/pub/leaderboards")
+        .then(response=>response.json())
+        .then(jsonData=>setChessPlayers(jsonData));
+
+    }, []);
   return (
     <div className='bg-primary text-white ml-40 pl-10 min-h-screen h-max pb-10 '>
         <div className='flex justify-center'>
@@ -12,16 +20,23 @@ const Leaderboards = () => {
             <div className='translate-y-10 h-max p-5 shadow-2xl border-b'><User name={'Alco2'} color='text-green-200' rank={2} pic={'https://www.imgacademy.com/sites/default/files/2022-07/img-homepage-meta.jpg'}/></div>
         </div>
         <div className='w-full grid place-items-center'>
-            <table className='w-full'>
-                <tbody>
-                <tr >
-                    <td className='w-1/3 p-2 opacity-40'>Rank</td>
+            <table className='w-2/3'>
+            <tbody>
+                <tr className='shadow-md shadow-white'>
+                    <td className='w-1/6 p-2 opacity-40'>Rank</td>
                     <td className='w-1/3 p-2 opacity-40'>name</td>
                     <td className='w-1/3 p-2 opacity-40'>score</td>
                 </tr>
-                </tbody>
+                {chessPlayers.daily?.map((player)=>(
+                <tr key={player.player_id} className='bg-primarySecond rounded-md'>
+                    <td className='p-2'>{player.rank}</td>
+                    <td className='p-2'>{player.username}</td>
+                    <td className='p-2'>{player.score}</td>
+                </tr>
+                ))}
+            </tbody>
             </table>
-        </div>
+        </div>  
     </div>
   )
 }
