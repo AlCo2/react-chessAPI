@@ -19,7 +19,7 @@ const Sidebar = () => {
         </div>
         <Link to="/" onClick={()=>setActive('Dashboard')}> <SideBarIcon nameOfClass={active==='Dashboard'?'active':''} icon={<RxDashboard size="28"/>} text={"Dashboard"} /></Link>
         <Link to="/leaderboards" onClick={()=>setActive('leaderboards')}><SideBarIcon nameOfClass={active==='leaderboards'?'active':''}  icon={<FiActivity size="28"/>} text={"Activity"} /></Link>
-        <Link to="/schedule" onClick={()=>setActive('Schedule')}><SideBarIcon nameOfClass={active==='Schedule'?'active':''}  icon={<AiFillSchedule size="28"/>} text={"Schedule"} /></Link>
+        <Link to="/quotes" onClick={()=>setActive('quotes')}><SideBarIcon nameOfClass={active==='quotes'?'active':''}  icon={<AiFillSchedule size="28"/>} text={"quotes"} /></Link>
         <Link to="/settings" onClick={()=>setActive('Settings')}><SideBarIcon nameOfClass={active==='Settings'?'active':''}  icon={<FiSettings size="28"/>} text={"settings"}/></Link>
     </div>
   )
