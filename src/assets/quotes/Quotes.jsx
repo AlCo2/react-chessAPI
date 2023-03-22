@@ -20,8 +20,8 @@ const Quotes = () => {
             
         </div>
         <div className='w-full grid place-items-center'>
-          <div><h1 className='text-lg font-bold bg-cyan-400 shadow-md py-2 px-5 rounded-sm mb-5'>{quote.anime}</h1></div>
-          <div><p>{quote.quote}</p></div>
+          <div><h1 className='text-lg font-bold bg-cyan-800 shadow-md py-2 font-mono px-5 rounded-md mb-5'>{quote.anime}</h1></div>
+          <div className='w-1/2 font-mono bg-lime-900 p-2 rounded'><p className='text-sm'>{quote.quote}</p></div>
         </div>
     </div>
   )

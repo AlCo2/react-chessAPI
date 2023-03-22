@@ -13,7 +13,7 @@ const App = () => {
         <Searchbar/>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/leaderboards" element={<Leaderboards />} />
+          <Route path="/leaderboards/*" element={<Leaderboards />} />
           <Route path="/quotes" element={<Quotes/>} />
        </Routes>
       </>
