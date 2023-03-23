@@ -20,9 +20,9 @@
         @apply bg-orange text-white rounded-xl;
     }
     .leaderboardInactive{
-        @apply transition-all duration-100 hover:bg-orange px-2 hover:rounded hover:px-5 hover:py-1 hover:font-medium
+        @apply transition-all duration-300 bg-primarySecond px-5 rounded hover:px-5 py-1 hover:rounded-lg
     }
     .leaderboardActive{
-        @apply bg-orange px-5 py-1 rounded
+        @apply bg-orange px-5 py-1 rounded-lg
     }
 }

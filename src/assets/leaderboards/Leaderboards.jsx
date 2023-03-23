@@ -13,7 +13,7 @@ const Leaderboards = () => {
     }, []);
   return (
     <div className='bg-primary text-white ml-40 pl-10 min-h-screen h-max pb-10 '>
-        <div className='flex justify-center gap-10'>
+        <div className='flex justify-center -translate-x-12 gap-10'>
             <Link onClick={()=>setActive('live_blitz')} to={'./Live_blitz'} className={active==='live_blitz'?'leaderboardActive':'leaderboardInactive'}><button >Live blitz</button></Link>
             <Link onClick={()=>setActive('daily')} to={'./'}><button className={active==='daily'?'leaderboardActive':'leaderboardInactive'}>Daily</button></Link>
             <Link onClick={()=>setActive('tactics')} to={'./tactics'}><button className={active==='tactics'?'leaderboardActive':'leaderboardInactive'}>tactics</button></Link>

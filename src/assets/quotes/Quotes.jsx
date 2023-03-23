@@ -15,15 +15,16 @@ const Quotes = () => {
       return <div>Loading...</div>;
     }
   return (
-    <div className="bg-primary bg-center bg-cover text-white ml-40 pl-10 min-h-screen h-max pb-10 ">
-        <div className='flex justify-center'>
-    
+    <div className="bg-primary text-white ml-32 min-h-screen h-max pb-10 grid place-items-center">
+      <div>
+        <div className="grid border place-items-center bg-primarySecond rounded-md h-30 w-2/4 ml-60">
+          <div className='font-Poppins'><p className='text-md font-bold p-10'>{quote.quote}</p></div>
         </div>
-        <div className='w-1/2 grid place-items-center translate-y-5'><h1 className='text-lg font-bold bg-blue-600 shadow-md py-2 font-mono px-5 rounded-md mb-5'>{quote.anime}</h1></div>
-        <div className="grid place-items-center bg-[url('https://i.pinimg.com/736x/60/cb/46/60cb4600ad2427938722b77faba6426a.jpg')] bg-cover rounded-md h-30 w-2/4 ml-60">
-          <div className='font-mono'><p className='text-md font-bold p-10'>{quote.quote}</p></div>
+        <div className='w-1/2 flex place-items-center translate-x-60 gap-2 mt-1'>
+          <h1 className='text-lg font-bold bg-orange text-primarySecond shadow-md py-1 font-Poppins px-3 rounded-md mb-5'>{quote.anime}</h1>
+          <p className='text-lg font-bold text-primary bg-orange shadow-md py-1 font-Poppins px-3 rounded-md mb-5'>{quote.character}</p>
         </div>
-        <div className='w-1/2 grid place-items-center translate-x-52'><p className='text-lg font-bold bg-red-600 shadow-md py-2 font-mono px-5 rounded-md mb-5'>{quote.character}</p></div>
+      </div>
     </div>
   )
 }
