@@ -14,7 +14,7 @@ const Sidebar = () => {
           <div className='grid place-items-center'>
             <img className='rounded-full h-16 w-16' src="https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-animated-twitch-profile-photo-oEqs2yqaL8s.jpg" alt="profilpic" />
             <p className='mb-3'>AlCo2</p>
-            <button className='border text-white rounded-md w-10 text-sm hover:bg-white hover:text-black transition-all hover:rounded-xl duration-300 ease-linear'>Edit</button>
+            <Link to="/settings" onClick={()=>setActive('Settings')}><button className='border text-white rounded-md w-10 text-sm hover:bg-white hover:text-black transition-all hover:rounded-xl duration-300 ease-linear'>Edit</button></Link>
           </div>
         </div>
         <Link to="/" onClick={()=>setActive('Dashboard')}> <SideBarIcon nameOfClass={active==='Dashboard'?'active':''} icon={<RxDashboard size="28"/>} text={"Dashboard"} /></Link>
