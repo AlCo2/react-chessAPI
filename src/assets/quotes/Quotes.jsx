@@ -12,7 +12,7 @@ const Quotes = () => {
     }, [quote]);
 
     if (!quote) {
-      return <div>Loading...</div>;
+      return <div className='bg-primary text-white ml-32 min-h-screen h-max pb-10 grid place-items-center'>Loading...</div>;
     }
   return (
     <div className="bg-primary text-white ml-32 min-h-screen h-max pb-10 grid place-items-center">
