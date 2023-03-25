@@ -4,13 +4,17 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 const Leaderboards = () => {
     const [active, setActive] = useState('daily');
-    const [chessPlayers, setChessPlayers] = useState([]);
+    const [chessPlayers, setChessPlayers] = useState(null);
         useEffect(()=>{
         fetch("https://api.chess.com/pub/leaderboards")
         .then(response=>response.json())
         .then(jsonData=>setChessPlayers(jsonData));
 
     }, []);
+
+    if(!chessPlayers){
+        return <div className='bg-primary text-white ml-32 min-h-screen h-max pb-10 grid place-items-center'>Loading...</div>;
+    }
   return (
     <div className='bg-primary text-white ml-40 pl-10 min-h-screen h-max pb-10 '>
         <div className='flex justify-center -translate-x-12 gap-10'>

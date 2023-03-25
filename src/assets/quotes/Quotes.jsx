@@ -3,13 +3,16 @@ import React, { useEffect, useState } from 'react'
 const Quotes = () => {
     const [quote, setQuote] = useState(null);
     useEffect(() => {
-      if (!quote) {
-        fetch("https://animechan.vercel.app/api/random")
-          .then((response) => response.json())
-          .then((jsonData) => setQuote(jsonData));
-          console.log(quote);
-      }
-    }, [quote]);
+      preFetchQuote().then((res)=>{
+        setQuote(res);
+      })
+    }, []);
+
+    const preFetchQuote = async () => {
+      const data = await fetch("https://animechan.vercel.app/api/random");
+      const result = await data.json();
+      return result
+    }
 
     if (!quote) {
       return <div className='bg-primary text-white ml-32 min-h-screen h-max pb-10 grid place-items-center'>Loading...</div>;
