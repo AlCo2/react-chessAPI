@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiAlertOctagon,FiArrowRight} from 'react-icons/fi';
+import img from './img.png';
 
 
 const Dashboard = () => {
@@ -81,12 +82,12 @@ const Section4 = ()=>{
                 <p className='font-bold flex items-center gap-3'><FiAlertOctagon/> Roi</p>
                 <p className='text-xs text-right opacity-70'>Details</p>
             </div>
-            <div className='py-8'>
+            <div className='py-4'>
                 <p className='text-3xl font-semibold'>283% <br /> <span className='text-sm opacity-60 font-normal'>Return On Investment</span></p>
             </div>
             <div>
                 <div className='w-max'>
-                    {/* <img className='h-24 w-56' src="https://www.seekpng.com/png/full/650-6502309_digital-lines-png.png" alt="" />   */}
+                    <img src={img} width={230} height={40} alt="" />
                 </div>
             </div>
         </div>
